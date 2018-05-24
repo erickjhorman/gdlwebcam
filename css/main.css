@@ -141,7 +141,7 @@ html{
 
 
 h2{
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Oswald', sans-serif;
 }
 /** Header **/
 
@@ -243,6 +243,61 @@ div.barra{
   background-color: #353535;
   padding: 20px;
 }
+
+div.logo {
+  width: 80%;
+}
+
+div.logo img{
+  width: 100%;
+}
+@media only screen and (min-width: 768px){
+  div.logo {
+    width: 33%;
+    float: left;
+  }
+}
+
+/** navegacion principal**/
+nav.navegacion-principal{
+display: none;
+}
+
+nav.navegacion-principal a {
+  font-family: 'Oswald', sans-serif;
+  color: #ffffff;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all .3s ease:
+}
+nav.navegacion-principal a:hover {
+background-color: #fe4918;
+}
+nav.navegacion-principal a:last-child{
+  border: 2px solid #fe4918;
+  color:#fe4918;
+}
+nav.navegacion-principal a:last-child:hover{
+  color:#ffffff;
+}
+
+@media only screen and (min-width: 768px){
+  nav.navegacion-principal{
+  width: 67%;
+  float: right;
+  text-align: right;
+  display: block;
+  }
+
+nav.navegacion-principal a {
+margin-right: 10px;
+padding: 10px 10px;
+display: inline-block;
+  }
+
+
+
 
 
 /* ==========================================================================
