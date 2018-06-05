@@ -162,8 +162,37 @@ h2::after{
   width: 100px;
   display: block;
 }
-/** Header **/
 
+
+h3{
+  font-size: 1.8em;
+  color:#fe4918;
+    font-family: 'PT Sans', sans-serif;
+    margin: 0;
+}
+
+.button{
+  background-color: #fe4918;
+  padding: 10px 40px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  text-decoration: none;
+  font-size: 0.9em;
+  margin-top: 20px;
+  display: inline-block;
+  transition: all .3s ease;
+}
+
+.float-right{
+float: right;
+}
+
+.button:hover{
+    background-color: #e33000;
+}
+/** Header **/
 div.hero{
   background-image: url(../img/encabezado.jpg);
   height: 100vh;
@@ -415,11 +444,30 @@ nav.menu-programa a{
   }
 }
 
-nav.menu-programa a i{
+nav.menu-programa a i,
+div.detalle-evento p i{
    color: #fe4918;
    font-size: 1.8em;
    margin-right: 10px;
 }
+/* detalle evento */
+
+div.detalle-evento {
+margin-top: 20px;
+border-bottom: 1px solid black;
+padding: 10px 10px;
+}
+div.detalle-evento :nth-child(2){
+  border: none;
+}
+
+div.detalle-evento p{
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
