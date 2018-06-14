@@ -499,7 +499,15 @@ div.invitado img {
   max-width: 100%;
   filter: gray;
   -webkit-filter:grayscale(1);
+  -webkit-transition: all .5s ease-in-out;
+
 }
+div.invitado:hover img {
+-webkit-filter:grayscale(0);
+-webkit-transform: scale(1.1);
+transform: rotate(3deg);
+}
+
 
 div.invitado p {
   position: absolute;
@@ -512,10 +520,13 @@ div.invitado p {
   text-align: left;
   font-family: 'Oswald', sans-serif;
   color: #fe4918;
- text-transform: uppercase;
+  text-transform: uppercase;
+  -webkit-transition: all .5s ease-in-out;
+}
 
-
-
+div.invitado:hover p {
+bottom: -80px;
+opacity: 0;
 
 }
 
