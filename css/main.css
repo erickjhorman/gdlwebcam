@@ -530,6 +530,93 @@ opacity: 0;
 
 }
 
+/** Contador **/
+.paralax::before{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left:0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-filter: brightness(0.8);
+  filter: brightness(0.8);
+}
+div.contador{
+  position: relative;
+  height: auto;
+}
+div.contador::before{
+  background-image: url(../img/bg-resumen.jpg);
+  content: "";
+}
+
+ul.resumen-evento{
+  position: relative;
+  padding: 120px 0;
+}
+
+ul.resumen-evento li{
+  width: 50%;
+  float: left;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
+}
+
+@media only screen and (min-width:768px){
+  ul.resumen-evento li{
+     width: 25%;
+  }
+}
+p.numero{
+  color: #fb4818;
+  font-size: 4em;
+  display: block;
+  margin: 0 0 10px 0;
+  font-family: 'PT Sans', sans-serif;
+}
+
+/** Tabla de precios **/
+ul.lista-precios > li {
+  padding: 10px;
+}
+
+@media only screen and (min-width:768px){
+  ul.lista-precios > li {
+    float: left;
+    width: 33.3%;
+}
+
+div.tabla-precio {
+  border: 1px solid #e1e1e1;
+  background-color: #ffffff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+div.tabla-precio ul li{
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #868686;
+  line-height: 26px;
+}
+
+div.tabla-precio h3{
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+div.tabla-precio p.numero{
+  color: #000000;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
