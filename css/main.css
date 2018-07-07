@@ -173,7 +173,15 @@ h3 {
   margin-top: 20px;
   display: inline-block;
   transition: all .3s ease;
+  border: 2px solid #fe4918;
 }
+
+.button.hollow,
+.button.hollow:hover {
+background-color: white;
+color: #fe4918;
+}
+
 
 ul {
   list-style: none;
@@ -599,6 +607,13 @@ div.tabla-precio {
   text-align: center;
 }
 
+div.tabla-precio:hover {
+  transform: scale(1.1);
+  border: 1px solid #fe4918;
+  box-shadow: 0px 0px 50px #666;
+  transition: all .3s
+}
+
 div.tabla-precio ul li{
   font-family: 'PT Sans', sans-serif;
   font-size: 14px;
@@ -606,6 +621,17 @@ div.tabla-precio ul li{
   text-transform: uppercase;
   color: #868686;
   line-height: 26px;
+}
+
+div.tabla-precio ul li:before{
+  font-family: 'Font Awesome\ 5 Free';
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 5px;
+  font-size: 20px;
+  color: green;
+  -webkit-font-smoothing: antialiased;
+  content: '\2714';
 }
 
 div.tabla-precio h3{
@@ -616,7 +642,29 @@ div.tabla-precio h3{
 
 div.tabla-precio p.numero{
   color: #000000;
+  margin: 20px 0;
+
 }
+
+/** MAPA **/
+div.mapa{
+  height: 420px;
+  background-color: green;
+  }
+
+  /** Testimoniales **/
+  div.testimoniales{
+    padding-bottom: 20px;
+  }
+  div.testimonial{
+    padding: 5px;
+  }
+
+  @media only screen and (min-width:768px){
+      div.testimonial{
+      padding: 5px;
+    }
+  }
 /* ==========================================================================
    Helper classes
    ========================================================================== */
