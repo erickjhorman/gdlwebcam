@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function(){
   var calcular = document.getElementById('calcular');
   var errorDiv = document.getElementById('error');
   var botonRegistro = document.getElementById('btnRegistro');
-  var resultado = document.getElementById('lista-productos');
+  var lista_productos = document.getElementById('lista-productos');
 
  // extras
 var camisas = document.getElementById('camisa_evento');
@@ -46,6 +46,34 @@ if (regalo.value === '') {
       var totalPagar = (boletoDia * 30) + (boletos2Dias * 45) + (boletoCompleto * 50) +
       ((cantCamisas * 10)* 0.93) + (canEtiquetas * 2);
       console.log(totalPagar);
+
+      var listadoProductos = [];  // I created an array
+
+      if (boletoDia >= 1) {
+          listadoProductos.push(boletoDia + 'Pases por dia');
+      }
+      if (boletoDia >= 1) {
+          listadoProductos.push(boletos2Dias + 'Pases por dia');
+      }
+
+      if (boletoCompleto >= 1) {
+          listadoProductos.push(boletoCompleto + 'Pases por dia');
+      }
+
+      if (cantCamisas >= 1) {
+          listadoProductos.push(cantCamisas + 'Camisas');
+      }
+
+      if (canEtiquetas >= 1) {
+          listadoProductos.push(canEtiquetas + 'Etiquetas');
+      }
+
+      console.log(listadoProductos);
+
+     lista_productos.innerHTML = ''; // I rerun the array to get the information
+      for (var i = 0; i < listadoProductos.length; i++) {
+        lista_productos.innerHTML += listadoProductos[i] + '<br/>'; // innerHTML print everything are into the array
+      }
 }
 
 }
