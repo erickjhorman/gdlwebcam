@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function(){
   var errorDiv = document.getElementById('error');
   var botonRegistro = document.getElementById('btnRegistro');
   var lista_productos = document.getElementById('lista-productos');
+  var suma = document.getElementById('suma-total');
 
  // extras
 var camisas = document.getElementById('camisa_evento');
@@ -30,6 +31,10 @@ var camisas = document.getElementById('camisa_evento');
   }) */
 
 calcular.addEventListener('click', calcularMontos);
+
+pase_dia.addEventListener('blur', mostrarDias);  //Blur takes the value  of the input
+pase_dosdias.addEventListener('blur', mostrarDias);
+pase_completo.addEventListener('blur', mostrarDias);
 
 function calcularMontos(event) {
 event.preventDefault();
@@ -70,13 +75,42 @@ if (regalo.value === '') {
 
       console.log(listadoProductos);
 
-     lista_productos.innerHTML = ''; // I rerun the array to get the information
+      lista_productos.style.display = "block";
+      lista_productos.innerHTML = ''; // I rerun the array to get the information
       for (var i = 0; i < listadoProductos.length; i++) {
         lista_productos.innerHTML += listadoProductos[i] + '<br/>'; // innerHTML print everything are into the array
       }
+
+      suma.innerHTML = "$" + totalPagar.toFixed(2);
+      // toFixed is for round off the result
 }
 
 }
+
+function mostrarDias(){
+  var boletoDia = parseInt(pase_dia.value, 10)||0,
+      boletos2Dias = parseInt(pase_dosdias.value, 10)||0,
+      boletoCompleto = parseInt(pase_completo.value, 10)||0;
+
+      var diasElegidos = [];
+
+      if (boletoDia > 0) {
+        diasElegidos.push('viernes');
+      }
+      if (boletos2Dias > 0) {
+        diasElegidos.push('viernes' , 'sabado');
+      }
+      if (boletoCompleto > 0) {
+        diasElegidos.push('viernes' , 'sabado', 'domingo');
+      }
+
+      for (var i = 0; i < diasElegidos.length; i++) {
+        document.getElementById(diasElegidos[i]).style.display = 'block';
+      }
+
+      console.log("Blur" + diasElegidos);
+}
+
 
   console.log("listo");
 
